@@ -7,13 +7,20 @@ const joi = require('@hapi/joi');
 
 const schema = {
     name: joi.string().min(6).required(),
-    
+    email: joi.string().min(6).required().email(),
+    password: joi.string().min(6).required()
 }
 
 
 
 
 router.post('/register', async (req, res) => {
+
+    //Lets validate the data before we make a user
+    
+
+
+
     const user = new User({
         name: req.body.name,
         email: req.body.email,
