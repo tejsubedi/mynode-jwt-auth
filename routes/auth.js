@@ -1,6 +1,18 @@
 const router = require('express').Router();
 const User = require('../model/User');
 
+
+//Validation
+const joi = require('@hapi/joi');
+
+const schema = {
+    name: joi.string().min(6).required(),
+    
+}
+
+
+
+
 router.post('/register', async (req, res) => {
     const user = new User({
         name: req.body.name,
