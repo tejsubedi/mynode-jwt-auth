@@ -2,14 +2,7 @@ const router = require('express').Router();
 const User = require('../model/User');
 
 
-//Validation
-const joi = require('@hapi/joi');
 
-const schema = {
-    name: joi.string().min(6).required(),
-    email: joi.string().min(6).required().email(),
-    password: joi.string().min(6).required()
-}
 
 
 
