@@ -17,8 +17,7 @@ const schema = {
 router.post('/register', async (req, res) => {
 
     //Lets validate the data before we make a user
-    
-
+    const validation = joi.validate(req.body, schema);
 
 
     const user = new User({
