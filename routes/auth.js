@@ -2,11 +2,6 @@ const router = require('express').Router();
 const User = require('../model/User');
 
 
-
-
-
-
-
 router.post('/register', async (req, res) => {
 
     //Lets validate the data before we make a user
